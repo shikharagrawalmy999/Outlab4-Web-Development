@@ -1,0 +1,27 @@
+<!-- templates/home.html-->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+  
+  <center> <a class="btn btn-dark" href="{% url 'explore' %}">Explore</a>
+  <a class="btn btn-dark" href="{% url 'myprofile' %}">My Profile</a> 
+  <a class="btn btn-dark" href="{% url 'logout' %}">Log Out</a>
+  </center>
+  </div>
+  <br>
+  <center><h3>Welcome {{ user.first_name }} {{ user.last_name }}!</h3></center>
+  
+{% else %}
+  <center> <a class="btn btn-dark" href="{% url 'signup' %}">Signup</a>
+    <a class="btn btn-dark" href="{% url 'login' %}">Log In</a>
+  </center>
+  </div>
+  <br>
+  <center><h3>You are not logged in.</h3></center>
+
+{% endif %}
+{% endblock %}

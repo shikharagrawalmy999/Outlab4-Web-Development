@@ -1,0 +1,25 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <center> <a class="btn btn-dark mx-1" href="../../accounts/signup">Signup</a>
+  
+  <a class="btn btn-dark mx-1" href="./">Login</a> 
+  </center>
+   </div>
+
+<center>
+  <br>
+  <div class="my-5" >
+    <form method="post">
+      <h1>Login to Github profile</h1>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-dark" type="submit">Log In</button>
+    </form>
+  </div>
+
+</center>
+{% endblock %}

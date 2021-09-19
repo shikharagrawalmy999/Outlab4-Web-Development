@@ -1,0 +1,33 @@
+<!-- templates/registration/signup.html -->
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<style>
+  span, ul{
+    width:40%;
+    text-align: left;
+    margin:auto;
+
+  }
+</style>
+  <center> <a class="btn btn-dark" href="./">Signup</a>
+  <a class="btn btn-dark" href="../../accounts/login/">Login</a> 
+  </center>
+   </div>
+   <center>
+    <h1>Signup with Github profile</h1>
+  <form method="post">
+    <center>
+
+    {% csrf_token %}
+  </center>
+    <center>
+      {{ form.as_p }}
+      </center>
+
+    <button class="btn btn-dark" type="submit">Sign Up</button>
+  </form>
+</center>
+{% endblock %}

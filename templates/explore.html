@@ -1,0 +1,20 @@
+<!-- templates/home.html-->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <center> <a class="btn btn-dark" href="{% url 'explore' %}">Explore</a>
+  <a class="btn btn-dark" href="{% url 'myprofile' %}">My Profile</a> 
+  <a class="btn btn-dark" href="{% url 'logout' %}">Log Out</a>
+  </center>
+  </div>
+  <ul>
+      {% for profile in allprofiles %}
+      <li>
+        <a style="font-size: large;" class="GFJ button2" href="{% url 'exploreuser' user_name=profile.Userinfo.username %}"> {{ profile.Userinfo.username }}
+      </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

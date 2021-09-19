@@ -1,0 +1,28 @@
+<!-- templates/home.html-->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <center> <a class="btn btn-dark" href="{% url 'explore' %}">Explore</a>
+  <a class="btn btn-dark" href="{% url 'myprofile' %}">My Profile</a> 
+  <a class="btn btn-dark" href="{% url 'logout' %}">Log Out</a>
+  </center>
+  </div>
+  <p style="font-size: xx-large;">{{ list_of_details.4 }} {{ list_of_details.5 }} (@{{ list_of_details.0 }})</p>
+  {% if list_of_details %}
+  <p style="font-size: large;"><i>{{list_of_details.1}} Followers </i> </p>
+  <p style="font-size: large;"><i> Profile last updated: {{list_of_details.2}}</i>
+  {% if user.username == list_of_details.0 %} 
+  <a class="btn btn-success" href="{% url 'update'%}">Update Now</a>
+  {% endif %}
+  </p>
+  <ul>
+  {% for repo in list_of_details.3 %}
+      <li>{{ repo.name }} - {{repo.stars}} stars</li>
+  {% endfor %}
+  </ul>
+  {% else %}
+  <p>No polls are available.</p>
+{% endif %}
+{% endblock %}
