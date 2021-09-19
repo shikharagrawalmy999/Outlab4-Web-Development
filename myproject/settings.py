@@ -24,7 +24,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = False
 ALLOWED_HOSTS = ['floating-plateau-68226.herokuapp.com', '127.0.0.1', 'localhost', '0.0.0.0']
-# ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -68,16 +67,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME' : os.environ['NAME'],
-#         'USER' : os.environ['USER'],
-#         'PASSWORD' : os.environ['PASSWORD'],
-#         'HOST' : os.environ['HOST'],
-#         'PORT' : os.environ['PORT'],
-#     }
-# }
 DATABASES={}
 DATABASES['default']=dj_database_url.config(conn_max_age=600)
 AUTH_PASSWORD_VALIDATORS = [

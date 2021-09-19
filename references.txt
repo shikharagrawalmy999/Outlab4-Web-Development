@@ -1,0 +1,13 @@
+https://stackoverflow.com/questions/47949022/git-heroku-how-to-hide-my-secret-key
+https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+https://stackoverflow.com/questions/47949022/git-heroku-how-to-hide-my-secret-key
+https://stackoverflow.com/questions/17183792/install-libpq-dev-package-error
+https://stackoverflow.com/questions/11583714/install-psycopg2-on-ubuntu/52666769
+https://stackoverflow.com/questions/63785462/problems-instaling-libpq-dev-in-ubuntu-20-04
+https://stackoverflow.com/questions/5420789/how-to-install-psycopg2-with-pip-on-python
+https://stackoverflow.com/questions/16756624/gunicorn-connection-in-use-0-0-0-0-5000
+https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+https://github.com/heroku/cli/issues/1440
+https://stackoverflow.com/questions/48038133/heroku-local-stuck-on-okay-loaded-env-env-file-as-key-value-format
+https://www.youtube.com/watch?v=GMbVzl_aLxM
+https://www.youtube.com/watch?v=-OwUWBjSCFM
