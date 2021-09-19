@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import dotenv
+import dj_database_url
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,8 +23,8 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY'] 
 
 DEBUG = False
-# ALLOWED_HOSTS = ['floating-plateau-68226.herokuapp.com', '127.0.0.1', 'localhost', '0.0.0.0']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['floating-plateau-68226.herokuapp.com', '127.0.0.1', 'localhost', '0.0.0.0']
+# ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,17 +68,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME' : os.environ['NAME'],
-        'USER' : os.environ['USER'],
-        'PASSWORD' : os.environ['PASSWORD'],
-        'HOST' : os.environ['HOST'],
-        'PORT' : os.environ['PORT'],
-    }
-}
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME' : os.environ['NAME'],
+#         'USER' : os.environ['USER'],
+#         'PASSWORD' : os.environ['PASSWORD'],
+#         'HOST' : os.environ['HOST'],
+#         'PORT' : os.environ['PORT'],
+#     }
+# }
+DATABASES={}
+DATABASES['default']=dj_database_url.config(conn_max_age=600)
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
