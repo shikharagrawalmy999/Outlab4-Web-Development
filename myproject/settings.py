@@ -22,8 +22,8 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY'] 
 
 DEBUG = False
-# ALLOWED_HOSTS = ['thawing-mesa-04428.herokuapp.com', '127.0.0.1']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['floating-plateau-68226.herokuapp.com', '127.0.0.1']
+# ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
